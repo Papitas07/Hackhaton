@@ -1,3 +1,11 @@
 <p>
-  cours works!
+{{milk[0].date}}
+
 </p>
+<div *ngFor="let item of allEggs" class="card col-4" style="width: 18rem;">
+  <img class="card-img-top" [src]="item.image" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{item.id}}</h5>
+    <p class="card-text">{{ item.power}}</p>
+  </div>
+</div>
