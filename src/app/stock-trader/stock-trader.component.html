@@ -1,0 +1,16 @@
+<p>
+  stock-trader works!
+</p>
+
+
+<div class="myBag" *ngFor="let item of fromMerchandEgged">
+  <img [src]="item.image">
+  {{item.name}}
+  {{item.power}}
+  
+
+</div>
+
+
+<button (click)="buyEgg()">Buy this Egg</button>
+<button (click)="sellEgg()">Sell my Egg</button>

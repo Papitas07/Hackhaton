@@ -3,6 +3,8 @@ import { Operator } from 'rxjs'
 import { filter, debounce, switchMap, map } from 'rxjs/operators'
 import { EasterApiService } from '../easter-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Chart } from 'chart.js';
+
 
 
 @Component({
@@ -22,20 +24,18 @@ public date
 public allEggs 
 
 
+
   constructor(private activatedRoute:ActivatedRoute,private router:Router, private easterEgg: EasterApiService) { }
 
   ngOnInit() {
-
-    this.easterEgg.getAllEggs().subscribe(result=> {
-      this.allEggs=result
-    })
    
 
       this.timestamp = new Date();
       this.interval = 1000
 
+
       this.easterEgg.getMilk(this.timestamp, this.interval).subscribe(result => {
-        this.milk = result;
+        this.milk=result
       });
       this.easterEgg.getChocolate(this.timestamp, this.interval).subscribe(result => {
         this.chocolates = result;
@@ -45,5 +45,6 @@ public allEggs
       
   });
 }
- 
+
+
   }
