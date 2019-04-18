@@ -51,7 +51,9 @@
  *  (window as any).__Zone_enable_cross_context_check = true;
  *
  */
-
+import 'bootstrap';
+import 'popper.js';
+import 'jquery';
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */

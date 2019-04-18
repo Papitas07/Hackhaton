@@ -1,0 +1,20 @@
+<p>
+  marchand works!
+</p>
+
+<div class="background"></div>
+<img src="/assets/lemarchand.gif" class="center">
+
+<div *ngIf="results">
+  <p>Nombre de résultats {{results.total_items}}</p>
+  <div class="row">
+
+    <div *ngFor="let item of results.items" class="card col-4" style="width: 18rem;">
+      <img class="card-img-top" [src]="item.links[0].href" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.data[0].title }}</h5>
+        <p class="card-text">{{ item.data[0].description|slice:0:60 }}</p>
+      </div>
+    </div>
+  </div>
+</div>

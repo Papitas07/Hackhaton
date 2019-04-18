@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
 import { EasterApiService } from './easter-api.service';
+import { CoursComponent } from './cours/cours.component';
+import { MarchandComponent } from './marchand/marchand.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CoursComponent,
+    MarchandComponent
   ],
   imports: [
     BrowserModule,
