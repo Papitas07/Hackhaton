@@ -19,12 +19,16 @@ public milk
 public chocolates
 public eggs 
 public date
+public allEggs 
 
 
   constructor(private activatedRoute:ActivatedRoute,private router:Router, private easterEgg: EasterApiService) { }
 
   ngOnInit() {
 
+    this.easterEgg.getAllEggs().subscribe(result=> {
+      this.allEggs=result
+    })
    
 
       this.timestamp = new Date();

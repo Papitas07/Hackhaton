@@ -15,6 +15,19 @@ class stockApi {
 
 }
 
+class eggsProperty {
+
+  id: string
+  name: string
+  color: string
+  country: string
+  rarity: string
+  image: string
+  power: string
+
+
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -38,4 +51,10 @@ export class EasterApiService {
     let myTimestamp = timestamp.getTime()
     return this.http.get<stockApi>(`http://easteregg.wildcodeschool.fr/api/stocks/eggs?min=${myTimestamp}&interval=${interval}`)
   }
+
+getAllEggs(): Observable<eggsProperty>{
+
+  return this.http.get<eggsProperty>(`http://easteregg.wildcodeschool.fr/api/eggs`)
+}
+  
 }
