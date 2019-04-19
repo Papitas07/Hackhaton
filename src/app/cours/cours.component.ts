@@ -23,7 +23,7 @@ public eggs
 public date
 public allEggs 
 public lineChartData: ChartDataSets[] = [
-  { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
+  { data: [0, 59], label: ' MilkTrade' },
 ];
 public lineChartLabels: Label[] = ['January'];
 public lineChartOptions: (ChartOptions & { annotation: any }) = {
@@ -32,7 +32,7 @@ public lineChartOptions: (ChartOptions & { annotation: any }) = {
 public lineChartColors: Color[] = [
   {
     borderColor: 'black',
-    backgroundColor: 'rgba(255,0,0,0.3)',
+    // backgroundColor: 'rgba(255,0,0,0.3)',
   },
 ];
 public lineChartLegend = true;
@@ -41,8 +41,10 @@ public lineChartPlugins = [];
 
 
 
-  constructor(private activatedRoute:ActivatedRoute,private router:Router, private easterEgg: EasterApiService) { }
 
+  constructor(private activatedRoute:ActivatedRoute,private router:Router, private easterEgg: EasterApiService) { }
+  
+  
   ngOnInit() {
 
     this.easterEgg.getAllEggs().subscribe(result=> {

@@ -56,5 +56,7 @@ getAllEggs(): Observable<eggsProperty>{
 
   return this.http.get<eggsProperty>(`http://easteregg.wildcodeschool.fr/api/eggs`)
 }
+
+
   
 }

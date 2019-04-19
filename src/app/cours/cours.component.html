@@ -1,3 +1,8 @@
+
+
+
+
+
 <!-- <div style="display: block;" width="200" height="200 !important">
   <canvas baseChart width="200" height="200"
     [datasets]="lineChartData"
@@ -6,29 +11,21 @@
     [colors]="lineChartColors"
     [legend]="lineChartLegend"
     [chartType]="lineChartType"
-    [plugins]="lineChartPlugins">
+    [plugins]="lineChartPlugins"
+   >
   </canvas>
-</div> -->
-
-<h1> Easter Trading </h1>
-
-<div class="container-fluid">
-  <div class="row"> 
-    <div class="col-lg-6" >
-      <button type="button" class="custom">Milk</button>
-      <button type="button" class="custom">Chocolate</button>
-      <button type="button" class="custom">Eggs </button>
-    </div>
-      <div class="col-lg-6"
-      ></div>
-  </div>
-
 </div>
 
 
+<canvas id="mycanvas" width="400" height="100"></canvas>
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" >
+       {{ milk[0].price }}</li>
+  </ul>
+</div>
 <p *ngIf="milk != null">
-{{milk[0].date}}
-{{ milk[0].price }}
+    {{milk[0].date}}
 </p>
 <div *ngFor="let item of allEggs" class="card col-4" style="width: 18rem;">
   <img class="card-img-top" [src]="item.image" alt="Card image cap">
@@ -36,4 +33,4 @@
     <h5 class="card-title">{{item.id}}</h5>
     <p class="card-text">{{ item.power}}</p>
   </div>
-</div>
+</div> -->
