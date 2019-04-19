@@ -14,7 +14,11 @@
             {{item.power}}
           <p class="card-text">Egg's power: {{ item.power}}
           </p>
-          <button (click)="sellEgg(item)">Buy</button>
+          <div *ngIf="this.stock.milk === 21 && this.stock.chocolate=== 4 && this.stock.egg === 19">
+            
+              <img src= "https://www.horoscopemagazine.fr/wp-content/uploads/2018/04/image_oeuf_de_yoni-1024x538.jpg">
+              <p>You get the legendary Egg !!!</p>
+            </div>
         </div>
       </div>
     </div>
