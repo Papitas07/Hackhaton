@@ -18,7 +18,6 @@ export class StockTraderComponent implements OnInit {
     egg:0
 
   }
-  public canBuy = 1
   public interval 
   public timestamp
   public milkPrice
@@ -79,7 +78,7 @@ export class StockTraderComponent implements OnInit {
 
   buyMilk(){
 
-  if((this.stock.totalMoney-this.milkPrice) > 0  && this.canBuy === 1){
+  if((this.stock.totalMoney-this.milkPrice) > 0 ){
     this.stock.milk += 1
     this.stock.totalMoney -=  this.milkPrice
     console.log(this.stock.totalMoney)
@@ -92,7 +91,7 @@ export class StockTraderComponent implements OnInit {
 
   buyChocolate(){
 
-    if((this.stock.totalMoney-this.chocolatePrice) > 0  && this.canBuy === 1){
+    if((this.stock.totalMoney-this.chocolatePrice) > 0){
     this.stock.chocolate += 1
     this.stock.totalMoney -= this.chocolatePrice
     console.log(this.stock.totalMoney)
@@ -105,7 +104,7 @@ export class StockTraderComponent implements OnInit {
   }
   someEgg(){
 
-    if((this.stock.totalMoney-this.eggPrice ) > 0  && this.canBuy === 1){
+    if((this.stock.totalMoney-this.eggPrice ) > 0){
     this.stock.egg += 1
     this.stock.totalMoney -= this.eggPrice
     console.log(this.stock.totalMoney)
