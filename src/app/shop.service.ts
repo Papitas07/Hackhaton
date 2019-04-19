@@ -15,8 +15,7 @@ public eggs
 public egg
 public legendary
 public fromMerchandEgged = []
-public toMerchand = []
-
+public stockEggs = []
 constructor(public myEgg: EasterApiService, public http: HttpClient) { }
 
 
@@ -31,28 +30,11 @@ constructor(public myEgg: EasterApiService, public http: HttpClient) { }
   return this.fromMerchandEgged
 
  }
+givestockEggs(){
 
-  buyEgg(egg) {
-
-    const index = this.fromMerchandEgged.findIndex( x => x.id === egg.id);
-   // Supression de l'article du tableau
-   this.toMerchand.splice(index, 1);
-   this.fromMerchandEgged.push(egg)
-   console.log(this.fromMerchandEgged)
-  
-  }
-
-
-//Restore function stock-trader to shop
-  sellEgg(egg) {
-    const index = this.fromMerchandEgged.findIndex( x => x.id === egg.id);
-   // Supression de l'article du tableau
-   this.fromMerchandEgged.splice(index, 1);
-   this.toMerchand.push(egg)
-   console.log(this.toMerchand)
+  return this.stockEggs
 }
-
-
+  
 
  
 

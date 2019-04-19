@@ -77,7 +77,7 @@ export class EggsComponent implements OnInit {
     const index = this.allMerchandEggs.findIndex( x => x.id === egg.id);
    // Supression de l'article du tableau
    this.allMerchandEggs.splice(index, 1);
-
+   this.shop.stockEggs.push(egg)
    
 }
 }

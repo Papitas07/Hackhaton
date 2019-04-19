@@ -24,7 +24,7 @@ export class StockTraderComponent implements OnInit {
   public chocolatePrice
   public eggPrice
   public fromMerchandEgged = []
-
+  public stockEggs = []
 
   constructor(public shop: ShopService, public eggs:EasterApiService) { 
 
@@ -110,9 +110,9 @@ export class StockTraderComponent implements OnInit {
 
   ngOnInit() {
 
- 
- 
-
+    
+    this.stockEggs = this.shop.givestockEggs()
+    
     this.timestamp = new Date();
       this.interval = 1000
 
