@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Operator } from 'rxjs'
-import { filter, debounce, switchMap, map } from 'rxjs/operators'
-import { EasterApiService } from '../easter-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Chart } from 'chart.js';
 
 
+import { EasterApiService } from '../easter-api.service';
 
 @Component({
   selector: 'app-cours',
@@ -28,7 +26,6 @@ public allEggs
   constructor(private activatedRoute:ActivatedRoute,private router:Router, private easterEgg: EasterApiService) { }
 
   ngOnInit() {
-   
 
       this.timestamp = new Date();
       this.interval = 1000
