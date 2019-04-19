@@ -23,11 +23,6 @@ public allEggs
 
   ngOnInit() {
 
-    this.easterEgg.getAllEggs().subscribe(result=> {
-      this.allEggs=result
-    })
-   
-
       this.timestamp = new Date();
       this.interval = 1000
 

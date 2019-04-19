@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EasterApiService } from '../easter-api.service'
 
 @Component({
   selector: 'app-marchand',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarchandComponent implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit() {
-  }
 
 }
+
+  }
+
+
