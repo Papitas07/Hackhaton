@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+
 .buttonBack {
     border-radius:12px 0 12px 0;
     border:none;
-    font-family: 'menu';
     font-size: 50px;
-    padding:6px 20px 20px 20px;
+    font-family: 'VT323', monospace;
     text-align: center;
+    padding:6px 20px 20px 20px;
     width: 400px;
-    opacity: .8;
-    margin-top: 200px;
+    margin-left: 800px;
    -webkit-transition: all 200ms ease-in;
    -webkit-transform: scale(1); 
    -ms-transition: all 200ms ease-in;
@@ -16,5 +18,17 @@
    -moz-transform: scale(1);
    transition: all 200ms ease-in;
    transform: scale(1); 
- 
   }
+
+  .buttonBack:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+    
+    }
