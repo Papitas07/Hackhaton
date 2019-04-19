@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
 import { EasterApiService } from './easter-api.service';
 import { CoursComponent } from './cours/cours.component';
+import { ChartsModule } from 'ng2-charts'; 
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { CoursComponent } from './cours/cours.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule,
    
   ],
   providers: [EasterApiService],
