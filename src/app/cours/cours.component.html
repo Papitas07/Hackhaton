@@ -13,6 +13,7 @@
       <a class="w3-button w3-black w3-block w3-hover-teal w3-padding-16 ">Milk</a>
       <a  class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16 ">Chocolate</a>
     </div>
+    
     <app-stock-trader> </app-stock-trader>
   </div>
   <div class="w3-half w3-container" id="violet" style="height:700px">
@@ -44,35 +45,7 @@
 
 
 
-
-<!-- <div style="display: block;" width="200" height="200 !important">
-  <canvas baseChart width="200" height="200"
-    [datasets]="lineChartData"
-    [labels]="lineChartLabels"
-    [options]="lineChartOptions"
-    [colors]="lineChartColors"
-    [legend]="lineChartLegend"
-    [chartType]="lineChartType"
-    [plugins]="lineChartPlugins"
-   >
-  </canvas>
-</div>
+<app-marchand></app-marchand>
+<app-eggs></app-eggs>
 
 
-<canvas id="mycanvas" width="400" height="100"></canvas>
-<div class="card" style="width: 18rem;">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item" >
-       {{ milk[0].price }}</li>
-  </ul>
-</div>
-<p *ngIf="milk != null">
-    {{milk[0].date}}
-</p>
-<div *ngFor="let item of allEggs" class="card col-4" style="width: 18rem;">
-  <img class="card-img-top" [src]="item.image" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{item.id}}</h5>
-    <p class="card-text">{{ item.power}}</p>
-  </div>
-</div> -->
