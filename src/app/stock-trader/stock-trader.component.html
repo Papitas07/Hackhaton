@@ -1,0 +1,50 @@
+
+<div class ="ressources">
+  {{stock.milk}}
+  {{stock.chocolate}}
+  {{stock.egg}}
+</div>
+<div class="container">
+    <div class="row">
+      <div *ngFor="let item of shop.stockEggs" class="card col-4" style="width: 18rem;">
+        <img class="card-img-top" [src]="item.image" alt="Card image cap">
+        <div class="card-body">
+
+            {{item.name}}
+            {{item.power}}
+          <p class="card-text">Egg's power: {{ item.power}}
+          </p>
+          <button (click)="sellEgg(item)">Buy</button>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- <div *ngIf="shop.stockEggs.length === 8 || ((stock.milk===21) && (stock.chocolates===4) && (stock.eggs === 19)) " >
+    <img src="https://www.marlieu.fr/413-thickbox_default/gros-oeuf-choc-lait-friandises.jpg">
+  </div> -->
+
+
+
+<div class="container" id="x">
+    <div class="row">
+        <div class="col-md-4"> <button class="btn " (click)="buyMilk()">Buy Milk</button></div>
+        <div class="col-md-4"><button class="btn " (click)="buyChocolate()">Buy Chocolate</button>
+        </div>
+        <div class="col-md-4"><button class="btn" (click)="someEgg()">Buy Egg</button>
+        </div>
+        <div class="col-md-4"> <button class="btn " (click)="sellMilk()">Sell Milk</button>
+        </div>
+        <div class="col-md-4"><button class="btn" (click)="sellChocolate()">Sell Chocolate</button>
+        </div>
+        <div class="col-md-4"><button class="btn" (click)="sellEgg()">Sell Egg</button>
+        </div>
+    </div>
+    <div class="row"></div>
+</div>
+
+<div *ngIf="this.stock.milk === 21 && this.stock.chocolate=== 4 && this.stock.egg === 19">
+    <img src= "https://www.horoscopemagazine.fr/wp-content/uploads/2018/04/image_oeuf_de_yoni-1024x538.jpg">
+    <p>You get the legendary Egg !!!</p>
+  </div>
+  

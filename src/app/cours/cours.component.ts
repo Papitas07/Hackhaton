@@ -22,23 +22,9 @@ public chocolates
 public eggs 
 public date
 public allEggs 
-public lineChartData: ChartDataSets[] = [
-  { data: [0, 59], label: ' MilkTrade' },
-];
-public lineChartLabels: Label[] = ['January'];
-public lineChartOptions: (ChartOptions & { annotation: any }) = {
-  responsive: true,
-};
-public lineChartColors: Color[] = [
-  {
-    borderColor: 'black',
-    // backgroundColor: 'rgba(255,0,0,0.3)',
-  },
-];
-public lineChartLegend = true;
-public lineChartType = 'line';
-public lineChartPlugins = [];
-
+public milkPrice
+public chocolatePrice
+public eggPrice
 
 
 
@@ -65,6 +51,17 @@ public lineChartPlugins = [];
         this.eggs = result;
       
   });
+
+  this.eggs.getMilk(this.timestamp, this.interval).subscribe(result => {
+    this.milkPrice=result[0].price
+  });
+  this.eggs.getChocolate(this.timestamp, this.interval).subscribe(result => {
+    this.chocolatePrice = result[0].price;
+  });
+  this.eggs.getEggs(this.timestamp, this.interval).subscribe(result => {
+    this.eggPrice = result[0].price;
+  
+});
 }
  
   }

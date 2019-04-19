@@ -1,4 +1,41 @@
-.chartjs-render-monitor {
-    width: 800px  !important;
-    height: 800px !important;
+.card-body {
+    background-color: rgba(0, 0, 0,0.8);
+    color: whitesmoke;
+    height: 70px;
+}
+.card-text {
+    text-align: center;
+    
+}
+#violet {
+    background-image: linear-gradient(to right bottom, #1296eb,#0186e0,#0076d3, #0666c7, #1356b9);
+    border-radius: 10px;
+    border: solid 1px black;
+
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+}
+
+.y {
+    background-image: linear-gradient(to right top, #1356b9, #0666c7, #0076d3, #0186e0, #1296eb);
+    border-radius: 10px;
+    border: solid 1px black;
+
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+.w3-content {
+    max-width: none !important;
+}
+
+.color {
+    background-color: rgba(0, 0, 0,0.8);
+
 }
