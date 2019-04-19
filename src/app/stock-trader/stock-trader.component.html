@@ -1,0 +1,26 @@
+
+<div class ="ressources">
+  {{stock.milk}}
+  {{stock.chocolate}}
+  {{stock.egg}}
+</div>
+<div class="myBag" *ngFor="let item of fromMerchandEgged">
+
+  <img [src]="item.image">
+
+  {{item.name}}
+  {{item.power}}
+  
+</div>
+
+<button (click)="buyMilk()">Buy Milk</button>
+<button (click)="sellMilk()">Sell Milk</button>
+<button (click)="buyChocolate()">Buy Chocolate</button>
+<button (click)="sellChocolate()">Sell Chocolate</button>
+<button (click)="someEgg()">Buy Egg</button>
+<button (click)="sellEgg()">Sell Egg</button>
+
+
+
+<button (click)="buyEgg()">Buy this Egg</button>
+<button (click)="sellEgg()">Sell my Egg</button>

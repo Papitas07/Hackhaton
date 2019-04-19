@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Chart } from 'chart.js';
+
+
 import { EasterApiService } from '../easter-api.service';
 
 @Component({
@@ -19,6 +22,7 @@ public date
 public allEggs 
 
 
+
   constructor(private activatedRoute:ActivatedRoute,private router:Router, private easterEgg: EasterApiService) { }
 
   ngOnInit() {
@@ -26,8 +30,9 @@ public allEggs
       this.timestamp = new Date();
       this.interval = 1000
 
+
       this.easterEgg.getMilk(this.timestamp, this.interval).subscribe(result => {
-        this.milk = result;
+        this.milk=result
       });
       this.easterEgg.getChocolate(this.timestamp, this.interval).subscribe(result => {
         this.chocolates = result;
@@ -37,5 +42,6 @@ public allEggs
       
   });
 }
- 
+
+
   }

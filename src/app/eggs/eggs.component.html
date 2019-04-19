@@ -3,11 +3,12 @@
 </p>
 <div class="container">
   <div class="row">
-    <div *ngFor="let item of allEggs" class="card col-4" style="width: 18rem;">
+    <div *ngFor="let item of allMerchandEggs" class="card col-4" style="width: 18rem;">
       <img class="card-img-top" [src]="item.image" alt="Card image cap">
       <div class="card-body">
 
         <p class="card-text">Egg's power: {{ item.power}}</p>
+        <button (click)="sellEgg(item)">Buy</button>
       </div>
     </div>
   </div>

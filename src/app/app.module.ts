@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
 import { EasterApiService } from './easter-api.service';
 import { CoursComponent } from './cours/cours.component';
+import { StockTraderComponent } from './stock-trader/stock-trader.component';
+import { ShopDirective } from './shop.directive';
 import { MarchandComponent } from './marchand/marchand.component';
 import { RouterModule } from '@angular/router'
 import { ROUTES } from './app-routes';
 import { EggsComponent } from './eggs/eggs.component';
+import { ShopService } from './shop.service'
 import { GeneralComponent } from './general/general.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursComponent,
+    StockTraderComponent,
+    ShopDirective,
     MarchandComponent,
     EggsComponent,
     GeneralComponent
@@ -27,7 +32,7 @@ import { GeneralComponent } from './general/general.component'
 
    
   ],
-  providers: [EasterApiService],
+  providers: [EasterApiService,ShopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
