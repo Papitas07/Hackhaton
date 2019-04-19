@@ -20,17 +20,13 @@
     </div>
   
 
-<<<<<<< HEAD
+
   {{item.name}}
   {{item.power}}
   <div *ngIf="shop.stockEggs.length == 8 || ((stock.milk===21) && (stock.chocolates===4) && (stock.eggs === 19))" >
     
   </div>
-=======
-  <!-- <div *ngIf="shop.stockEggs.length === 8 || ((stock.milk===21) && (stock.chocolates===4) && (stock.eggs === 19)) " >
-    <img src="https://www.marlieu.fr/413-thickbox_default/gros-oeuf-choc-lait-friandises.jpg">
-  </div> -->
->>>>>>> a6c46333d40a260d33e3e669dfb4de25e2102d96
+
 </div>
 
 <button (click)="buyMilk()">Buy Milk</button>
@@ -45,3 +41,32 @@
   <img src= "https://www.horoscopemagazine.fr/wp-content/uploads/2018/04/image_oeuf_de_yoni-1024x538.jpg">
   <p>You get the legendary Egg !!!</p>
 </div>
+=======
+  <!-- <div *ngIf="shop.stockEggs.length === 8 || ((stock.milk===21) && (stock.chocolates===4) && (stock.eggs === 19)) " >
+    <img src="https://www.marlieu.fr/413-thickbox_default/gros-oeuf-choc-lait-friandises.jpg">
+  </div> -->
+
+
+
+<div class="container" id="x">
+    <div class="row">
+        <div class="col-md-4"> <button class="btn " (click)="buyMilk()">Buy Milk</button></div>
+        <div class="col-md-4"><button class="btn " (click)="buyChocolate()">Buy Chocolate</button>
+        </div>
+        <div class="col-md-4"><button class="btn" (click)="someEgg()">Buy Egg</button>
+        </div>
+        <div class="col-md-4"> <button class="btn " (click)="sellMilk()">Sell Milk</button>
+        </div>
+        <div class="col-md-4"><button class="btn" (click)="sellChocolate()">Sell Chocolate</button>
+        </div>
+        <div class="col-md-4"><button class="btn" (click)="sellEgg()">Sell Egg</button>
+        </div>
+    </div>
+    <div class="row"></div>
+</div>
+
+<div *ngIf="this.stock.milk === 21 && this.stock.chocolate=== 4 && this.stock.egg === 19">
+    <img src= "https://www.horoscopemagazine.fr/wp-content/uploads/2018/04/image_oeuf_de_yoni-1024x538.jpg">
+    <p>You get the legendary Egg !!!</p>
+  </div>
+  

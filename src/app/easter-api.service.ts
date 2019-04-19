@@ -90,6 +90,8 @@ getLegendaryEgg(): Observable<any>{
 
   return this.http.get<any>(`http://easteregg.wildcodeschool.fr/api/eggs/5cac51240d488f0da6151bd6`)
 }
+
+
   
 
 
