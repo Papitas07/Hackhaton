@@ -1,6 +1,4 @@
-<p>
-  eggs works!
-</p>
+
 <div class="container">
   <div class="row">
     <div *ngFor="let item of allMerchandEggs" class="card col-4" style="width: 18rem;">
@@ -10,7 +8,10 @@
         <p class="card-text">Egg's power: {{ item.power}}</p>
         <button (click)="sellEgg(item)">Buy</button>
       </div>
+
     </div>
+    <button class="buttonBack" [routerLink]="['/general']">Back</button> 
+
   </div>
 </div>
 <app-stock-trader></app-stock-trader>

@@ -33,7 +33,7 @@ export class StockTraderComponent implements OnInit {
   sellMilk(){
     if (this.stock.milk > 0){
       this.stock.milk -= 1
-      this.stock.totalMoney+= this.milkPrice
+      this.stock.totalMoney+= parseFloat(this.milkPrice)
       console.log(this.stock.totalMoney)
     }
     else{
@@ -46,7 +46,7 @@ export class StockTraderComponent implements OnInit {
   sellChocolate(){
     if (this.stock.chocolate > 0 ){
       this.stock.chocolate -= 1
-      this.stock.totalMoney+= this.chocolatePrice
+      this.stock.totalMoney+= parseFloat(this.chocolatePrice)
       console.log(this.stock.totalMoney)
     }
     else{
@@ -59,7 +59,7 @@ export class StockTraderComponent implements OnInit {
   sellEgg(){
     if (this.stock.egg > 0 ){
       this.stock.egg -= 1
-      this.stock.totalMoney += this.eggPrice
+      this.stock.totalMoney += parseFloat(this.eggPrice)
     }
     else{
       alert("You dont have any egg to sell")
@@ -70,9 +70,9 @@ export class StockTraderComponent implements OnInit {
 
   buyMilk(){
 
-  if((this.stock.totalMoney-this.milkPrice) > 0 ){
+  if((this.stock.totalMoney- parseFloat(this.milkPrice)) > 0 ){
     this.stock.milk += 1
-    this.stock.totalMoney -=  this.milkPrice
+    this.stock.totalMoney -=  parseFloat(this.milkPrice)
     console.log(this.stock.totalMoney)
   }
   else{
@@ -83,9 +83,9 @@ export class StockTraderComponent implements OnInit {
 
   buyChocolate(){
 
-    if((this.stock.totalMoney-this.chocolatePrice) > 0){
+    if((this.stock.totalMoney-parseFloat(this.chocolatePrice)) > 0){
     this.stock.chocolate += 1
-    this.stock.totalMoney -= this.chocolatePrice
+    this.stock.totalMoney -= parseFloat(this.chocolatePrice)
     console.log(this.stock.totalMoney)
 
   }
@@ -96,9 +96,9 @@ export class StockTraderComponent implements OnInit {
   }
   someEgg(){
 
-    if((this.stock.totalMoney-this.eggPrice ) > 0){
+    if((this.stock.totalMoney-parseFloat(this.eggPrice) ) > 0){
     this.stock.egg += 1
-    this.stock.totalMoney -= this.eggPrice
+    this.stock.totalMoney -= parseFloat(this.eggPrice)
     console.log(this.stock.totalMoney)
 
     }
