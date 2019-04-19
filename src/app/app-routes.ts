@@ -3,7 +3,6 @@ import { CoursComponent } from './cours/cours.component';
 import { MarchandComponent } from './marchand/marchand.component'
 import { Component } from '@angular/core';
 import { EggsComponent } from './eggs/eggs.component'
-import { GeneralComponent } from './general/general.component'
 
 
 
@@ -14,6 +13,5 @@ const ROUTES: Routes = [
     {path: 'marchand', component: MarchandComponent},
     { path: 'cours', component: CoursComponent},
     { path: 'eggs', component: EggsComponent},
-    { path: 'general', component: GeneralComponent },
     {path: '', redirectTo: '/general', pathMatch: 'full'}
 ];

@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router'
 import { ROUTES } from './app-routes';
 import { EggsComponent } from './eggs/eggs.component';
 import { ShopService } from './shop.service'
-import { GeneralComponent } from './general/general.component'
+
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { GeneralComponent } from './general/general.component'
     ShopDirective,
     MarchandComponent,
     EggsComponent,
-    GeneralComponent
+    
   ],
   imports: [
     BrowserModule,
