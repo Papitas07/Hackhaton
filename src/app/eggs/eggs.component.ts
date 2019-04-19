@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EasterApiService } from '../easter-api.service';
+import { ShopService } from '../shop.service';
 
 @Component({
   selector: 'app-eggs',
@@ -20,7 +21,7 @@ export class EggsComponent implements OnInit {
   public legendaryEgg
   public allMerchandEggs = []
 
-  constructor(private eggs: EasterApiService) { }
+  constructor(public eggs: EasterApiService, public shop:ShopService) { }
 
   ngOnInit() {
 
@@ -71,4 +72,12 @@ export class EggsComponent implements OnInit {
     })
     this.allMerchandEggs
   }
+
+  sellEgg(egg) {
+    const index = this.allMerchandEggs.findIndex( x => x.id === egg.id);
+   // Supression de l'article du tableau
+   this.allMerchandEggs.splice(index, 1);
+
+   
+}
 }
