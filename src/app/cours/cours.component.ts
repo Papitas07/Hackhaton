@@ -1,16 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { ActivatedRoute, Router } from '@angular/router';
-import { Chart } from 'chart.js';
-
-=======
 import { Operator } from 'rxjs';
 import { filter, debounce, switchMap, map } from 'rxjs/operators';
-import { EasterApiService } from '../easter-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
->>>>>>> alex
 
 import { EasterApiService } from '../easter-api.service';
 

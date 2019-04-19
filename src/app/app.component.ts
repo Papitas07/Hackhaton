@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { EasterApiService } from '../easter-api.service';
 
 
 @Component({
