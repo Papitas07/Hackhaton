@@ -1,4 +1,4 @@
-.btn {
+.btn1 {
     background-color: rgba(95,0,221, 0.6);
     border-radius: 8px;
     color: whitesmoke;
@@ -8,11 +8,27 @@
     flex-direction: column;
 }
 
+.btn2 {
+    text-align: center;
+    background-color: rgba(95,0,221, 0.6);
+    font-size: 35px;
+}
+
 .ressources  {
     font-size: 30px;
 
 }
 
 #x {
-    margin-top: 20px
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.left {
+    margin-left: 25px;
+}
+
+img {
+    position: absolute;
+    width:100%;
 }

@@ -1,16 +1,16 @@
-
 <div class="container">
   <div class="row">
     <div *ngFor="let item of allMerchandEggs" class="card col-4" style="width: 18rem;">
       <img class="card-img-top" [src]="item.image" alt="Card image cap">
       <div class="card-body">
 
-        <p class="card-text">Egg's power: {{ item.power}}</p>
+        <p class="card-text">Egg's power: {{ item.power}} {{item.priceMilk}}</p>
         <button (click)="sellEgg(item)">Buy</button>
       </div>
 
     </div>
-    <button class="buttonBack" [routerLink]="['/general']">Back</button> 
 
   </div>
 </div>
+
+  

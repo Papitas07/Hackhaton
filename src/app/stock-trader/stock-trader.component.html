@@ -18,38 +18,17 @@
             {{item.power}}
           <p class="card-text">Egg's power: {{ item.power}}
           </p>
+        </div>
   
           
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div *ngIf="this.stock.milk === 21 && this.stock.chocolate=== 4 && this.stock.egg === 19" data-toggle="modal" data-target="#exampleModal">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    
-                    <img src= "https://www.horoscopemagazine.fr/wp-content/uploads/2018/04/image_oeuf_de_yoni-1024x538.jpg">
-                    <p>You get the legendary Egg !!!</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+        
+                
+                  
               
             </div>
         </div>
       </div>
-    </div>
- 
-</div>
-=======
+ =======
   <!-- <div *ngIf="shop.stockEggs.length === 8 || ((stock.milk===21) && (stock.chocolates===4) && (stock.eggs === 19)) " >
     <img src="https://www.marlieu.fr/413-thickbox_default/gros-oeuf-choc-lait-friandises.jpg">
   </div> -->
@@ -58,23 +37,41 @@
 
 <div class="container" id="x">
     <div class="row">
-        <div class="col-md-4"> <button class="btn " (click)="buyMilk()">Buy Milk</button></div>
-        <div class="col-md-4"><button class="btn " (click)="buyChocolate()">Buy Chocolate</button>
+        <div class="col-md-4"> <button class="btn1 " (click)="buyMilk()">Buy Milk</button></div>
+        <div class="col-md-4"><button class="btn1 " (click)="buyChocolate()">Buy Chocolate</button>
         </div>
-        <div class="col-md-4"><button class="btn" (click)="someEgg()">Buy Egg</button>
+        <div class="col-md-4"><button class="btn1 left" (click)="someEgg()">Buy Egg</button>
         </div>
-        <div class="col-md-4"> <button class="btn " (click)="sellMilk()">Sell Milk</button>
+        <div class="col-md-4"> <button class="btn1" (click)="sellMilk()">Sell Milk</button>
         </div>
-        <div class="col-md-4"><button class="btn" (click)="sellChocolate()">Sell Chocolate</button>
+        <div class="col-md-4"><button class="btn1" (click)="sellChocolate()">Sell Chocolate</button>
         </div>
-        <div class="col-md-4"><button class="btn" (click)="sellEgg()">Sell Egg</button>
+        <div class="col-md-4"><button class="btn1 left" (click)="sellEgg()">Sell Egg</button>
         </div>
     </div>
     <div class="row"></div>
 </div>
 
+
 <div *ngIf="this.stock.milk === 21 && this.stock.chocolate=== 4 && this.stock.egg === 19">
-    <img src= "https://www.horoscopemagazine.fr/wp-content/uploads/2018/04/image_oeuf_de_yoni-1024x538.jpg">
-    <p>You get the legendary Egg !!!</p>
+    
+    <button type="button" class="btn btn-primary btn2 " data-toggle="modal" data-target="#exampleModal">
+        Surprise ! 
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Legendary Eggs</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+                  <img src= "https://www.horoscopemagazine.fr/wp-content/uploads/2018/04/image_oeuf_de_yoni-1024x538.jpg">
+                  <p>You get the legendary Egg !!!</p>
+              
+            </div>
+          </div>
+        </div>
   </div>
   
