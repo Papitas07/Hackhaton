@@ -15,6 +15,8 @@ export class ShopService {
 public eggs 
 public egg
 public legendary
+public fromMerchandEgged = []
+public toMerchand = []
 
 constructor(public myEgg: EasterApiService, public http: HttpClient) { }
 
@@ -25,21 +27,27 @@ constructor(public myEgg: EasterApiService, public http: HttpClient) { }
   //getLegendaryEgg(){
    // if this.eggs.includes()
   //}
+ giveEgg(){
 
-  createEgg(egg) {
+  return this.fromMerchandEgged
+
+ }
+
+  buyEgg(egg) {
     // Ajout de l'article à la liste des articles
-    this.eggs.push(egg);
+    this.fromMerchandEgged.push(egg);
     // Réinitialisation du model
-    this.egg = new eggsProperty()
+   
+    console.log(this.fromMerchandEgged)
   }
 
-  deleteEgg(egg) {
-
-    const index = this.eggs.findIndex( x => x.id === egg.id);
+sellEgg(egg) {
+    const index = this.fromMerchandEgged.findIndex( x => x.id === egg.id);
    // Supression de l'article du tableau
-   this.eggs.splice(index, 1);
-
-  }
+   this.fromMerchandEgged.splice(index, 1);
+   this.toMerchand.push(egg)
+   console.log(this.fromMerchandEgged)
+}
  
 
 

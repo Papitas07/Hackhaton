@@ -9,6 +9,21 @@ import { EasterApiService, eggsProperty } from '../easter-api.service';
 })
 export class StockTraderComponent implements OnInit {
 
+
+  public stock = {
+
+    totalMoney: 5000,
+    milk:0,
+    chocolate:0,
+    egg:0
+
+  }
+  public canBuy = 1
+  public interval 
+  public timestamp
+  public milkPrice
+  public chocolatePrice
+  public eggPrice
   public fromMerchandEgged = []
   public eggOne
   public egg2
@@ -22,6 +37,84 @@ export class StockTraderComponent implements OnInit {
 
   constructor(public shop: ShopService, public eggs:EasterApiService) { 
 
+  }
+
+  sellMilk(){
+    if (this.stock.milk > 0){
+      this.stock.milk -= 1
+      this.stock.totalMoney+= this.milkPrice
+      console.log(this.stock.totalMoney)
+    }
+    else{
+      alert("You dont have any milk to sell")
+      console.log(this.stock.totalMoney)
+    }
+
+  }
+
+  sellChocolate(){
+    if (this.stock.chocolate > 0 ){
+      this.stock.chocolate -= 1
+      this.stock.totalMoney+= this.chocolatePrice
+      console.log(this.stock.totalMoney)
+    }
+    else{
+      alert("You dont have any chocolate to sell")
+      console.log(this.stock.totalMoney)
+    }
+
+  }
+
+  sellEgg(){
+    if (this.stock.egg > 0 ){
+      this.stock.egg -= 1
+      this.stock.totalMoney += this.eggPrice
+    }
+    else{
+      alert("You dont have any egg to sell")
+      console.log(this.stock.totalMoney)
+    }
+
+  }
+
+  buyMilk(){
+
+  if((this.stock.totalMoney-this.milkPrice) > 0  && this.canBuy === 1){
+    this.stock.milk += 1
+    this.stock.totalMoney -=  this.milkPrice
+    console.log(this.stock.totalMoney)
+  }
+  else{
+    alert('You cant afford this !')
+    console.log(this.stock.totalMoney)
+  }
+  }
+
+  buyChocolate(){
+
+    if((this.stock.totalMoney-this.chocolatePrice) > 0  && this.canBuy === 1){
+    this.stock.chocolate += 1
+    this.stock.totalMoney -= this.chocolatePrice
+    console.log(this.stock.totalMoney)
+
+  }
+  else{
+    alert('You cant afford this !')
+    console.log(this.stock.totalMoney)
+  }
+  }
+  someEgg(){
+
+    if((this.stock.totalMoney-this.eggPrice ) > 0  && this.canBuy === 1){
+    this.stock.egg += 1
+    this.stock.totalMoney -= this.eggPrice
+    console.log(this.stock.totalMoney)
+
+    }
+    else{
+      alert('You cant afford this !')
+      console.log(this.stock.totalMoney)
+    }
   }
 
   ngOnInit() {
@@ -70,24 +163,28 @@ export class StockTraderComponent implements OnInit {
       })
 
     })
-  
+
+    this.timestamp = new Date();
+      this.interval = 1000
+
+
+      this.eggs.getMilk(this.timestamp, this.interval).subscribe(result => {
+        this.milkPrice=result[0].price
+      });
+      this.eggs.getChocolate(this.timestamp, this.interval).subscribe(result => {
+        this.chocolatePrice = result[0].price;
+      });
+      this.eggs.getEggs(this.timestamp, this.interval).subscribe(result => {
+        this.eggPrice = result[0].price;
       
+  });
+      this.getEgg()
 
   }
 
-
-  buyEgg(egg) {
-    // Ajout de l'article à la liste des articles
-    this.fromMerchandEgged.push(egg);
-    // Réinitialisation du model
-   
-    console.log(this.fromMerchandEgged)
+  getEgg(){
+    this.fromMerchandEgged = this.shop.giveEgg()
   }
 
-sellEgg(egg) {
-    const index = this.fromMerchandEgged.findIndex( x => x.id === egg.id);
-   // Supression de l'article du tableau
-   this.fromMerchandEgged.splice(index, 1);
-   console.log(this.fromMerchandEgged)
-}
+
 }
