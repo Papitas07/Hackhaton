@@ -8,12 +8,12 @@ import { EasterApiService } from '../easter-api.service'
 })
 export class MarchandComponent implements OnInit {
 
-
-
-  constructor() { }
+  
+  constructor(public eggs:EasterApiService) { }
 
   ngOnInit() {
 
+   
 }
 
   }

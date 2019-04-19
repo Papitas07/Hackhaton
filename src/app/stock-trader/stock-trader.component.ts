@@ -24,15 +24,7 @@ export class StockTraderComponent implements OnInit {
   public chocolatePrice
   public eggPrice
   public fromMerchandEgged = []
-  public eggOne
-  public egg2
-  public egg3
-  public egg4
-  public egg5
-  public egg6
-  public egg7
-  public egg8
-  public legendaryEgg
+
 
   constructor(public shop: ShopService, public eggs:EasterApiService) { 
 
@@ -118,50 +110,8 @@ export class StockTraderComponent implements OnInit {
 
   ngOnInit() {
 
-    this.eggs.getEggOne().subscribe(result=> {
-      this.eggOne=result
-
-
-    })
-    this.eggs.getEgg2().subscribe(result=> {
-      this.egg2=result
-
-
-    })
-    this.eggs.getEgg3().subscribe(result=> {
-      this.egg3=result
-
-
-    })
-    this.eggs.getEgg4().subscribe(result=> {
-      this.egg4=result
-
  
-      this.eggs.getEgg5().subscribe(result=> {
-        this.egg5=result
-  
-  
-      })
-      this.eggs.getEgg6().subscribe(result=> {
-        this.egg6=result
-  
-  
-      })
-      this.eggs.getEgg7().subscribe(result=> {
-        this.egg7=result
-  
-  
-      })
-      this.eggs.getEgg8().subscribe(result=> {
-        this.egg8=result
-  
-  
-      })
-      this.eggs.getLegendaryEgg().subscribe(result=> {
-        this.legendaryEgg = result
-      })
-
-    })
+ 
 
     this.timestamp = new Date();
       this.interval = 1000

@@ -34,6 +34,7 @@ export class eggsProperty {
 })
 export class EasterApiService {
 
+
   constructor(private http: HttpClient) { }
 
   getMilk(timestamp: Date, interval: number): Observable<any> {
@@ -90,4 +91,8 @@ getLegendaryEgg(): Observable<any>{
   return this.http.get<any>(`http://easteregg.wildcodeschool.fr/api/eggs/5cac51240d488f0da6151bd6`)
 }
   
+giveAllEggs(){
+
+}
+
 }
